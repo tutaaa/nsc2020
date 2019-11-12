@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {TotalService} from '../total.service'
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private total : TotalService) { }
+
+  ngOnInit() {
+  
+  }
 
 
 coffeecount =0
@@ -39,9 +43,6 @@ addrice(){
 
 }
 
-ngOnInit() {
-  
-  console.log("ngonit")
-}
+
 
 }
